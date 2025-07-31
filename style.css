@@ -1,1 +1,119 @@
+/* Estilos gerais - Tema Preto e Dourado */
+body {
+    background-color: #000000;
+    color: #FFD700;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+/* Estilização do título */
+h1 {
+    font-family: 'Cinzel', 'Times New Roman', serif;
+    font-size: 2.8em;
+    text-align: center;
+    margin: 30px 0;
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+    letter-spacing: 1.5px;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #FFD700;
+    margin: 15px auto;
+    opacity: 0.7;
+}
+
+/* Estilização da imagem */
+img {
+    display: block;
+    margin: 20px auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #FFD700;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilização do nome */
+p {
+    text-align: center;
+    font-size: 1.3em;
+    margin: 25px 0;
+    color: #FFFFFF;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 0 20px;
+}
+
+/* Estilização do botão */
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    padding: 12px 30px;
+    background-color: transparent;
+    color: #FFD700;
+    border: 2px solid #FFD700;
+    border-radius: 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background-color: #FFD700;
+    color: #000000;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+}
+
+button a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo da setinha (pseudo-elemento) */
+button::after {
+    content: "→";
+    margin-left: 10px;
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+button:hover::after {
+    transform: translateX(5px);
+}
+
+/* Efeito de brilho dourado */
+.gold-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, rgba(255, 215, 0, 0.05) 100%);
+    pointer-events: none;
+    z-index: -1;
+}
