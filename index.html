@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeira Página</title>
-     <style>
+    <style>
         .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 300px;
             margin-top: 10px;
+        }
+        .botao-com-seta {
+            display: flex;
+            align-items: center;
+            gap: 5px; /* Espaço entre o botão e a seta */
         }
         button {
             padding: 5px 10px;
@@ -23,17 +28,22 @@
         button:hover {
             background-color: #45a049;
         }
+        .seta {
+            font-size: 1.2em;
+        }
     </style>
 </head>
 <body>
     <h1>Aula HTML e CSS</h1>
     <img src="aluna.webp" alt="foto aluna" width="300">
-    <br>
-     <div class="container">
-    <p>Nicoly Anselmo de Souza</p>
-    <a href="aulaborzuk.html">
-     <button>Clique Aqui</button>
-      </div>
-    <br>
+    <div class="container">
+        <p>Nicoly Anselmo de Souza</p>
+        <div class="botao-com-seta">
+            <a href="aulaborzuk.html">
+                <button>Clique Aqui</button>
+            </a>
+            <span class="seta">→</span>
+        </div>
+    </div>
 </body>
 </html>
